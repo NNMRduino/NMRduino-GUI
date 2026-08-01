@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>672</width>
+    <height>330</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>NMRduino</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="spacing">
+     <number>12</number>
+    </property>
+    <item row="1" column="0">
+     <widget class="QWidget" name="widget_taskManager" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>100</width>
+        <height>100</height>
+       </size>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_4">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout_3" columnstretch="0,0,0,0,0">
+      <item row="1" column="4">
+       <widget class="QProgressBar" name="progressBar">
+        <property name="value">
+         <number>0</number>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Current working directory</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Active task</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QLineEdit" name="lineEdit_runningTask">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3" colspan="2">
+       <widget class="QLineEdit" name="lineEdit_cwd"/>
+      </item>
+      <item row="0" column="1" rowspan="2">
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Stop</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0" rowspan="2">
+       <widget class="QPushButton" name="pushButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Run</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>672</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuMeasurements">
+    <property name="title">
+     <string>Tasks</string>
+    </property>
+    <widget class="QMenu" name="menuAddMeasurement">
+     <property name="title">
+      <string>Add...</string>
+     </property>
+    </widget>
+    <widget class="QMenu" name="menuRemove_2">
+     <property name="title">
+      <string>Remove...</string>
+     </property>
+    </widget>
+    <addaction name="menuAddMeasurement"/>
+    <addaction name="menuRemove_2"/>
+   </widget>
+   <widget class="QMenu" name="menuDevices">
+    <property name="title">
+     <string>Devices</string>
+    </property>
+    <widget class="QMenu" name="menuAdd">
+     <property name="title">
+      <string>Add...</string>
+     </property>
+    </widget>
+    <widget class="QMenu" name="menuRemove">
+     <property name="title">
+      <string>Remove...</string>
+     </property>
+    </widget>
+    <addaction name="menuAdd"/>
+    <addaction name="menuRemove"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionChange_Color"/>
+    <addaction name="actionChange_Secondary_Color"/>
+    <addaction name="actionShow_path_to_config_ini"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuMeasurements"/>
+   <addaction name="menuDevices"/>
+  </widget>
+  <action name="actionArduino_Data_Recorder">
+   <property name="text">
+    <string>Arduino DAQ</string>
+   </property>
+  </action>
+  <action name="actionNone">
+   <property name="text">
+    <string>None</string>
+   </property>
+  </action>
+  <action name="actionsdaf">
+   <property name="text">
+    <string>sdaf</string>
+   </property>
+  </action>
+  <action name="actionadsf">
+   <property name="text">
+    <string>adsf</string>
+   </property>
+  </action>
+  <action name="actionjkl">
+   <property name="text">
+    <string>jkl</string>
+   </property>
+  </action>
+  <action name="actionsfdg">
+   <property name="text">
+    <string>sfdg</string>
+   </property>
+  </action>
+  <action name="actionArduino_Uno_DAQ">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Arduino Uno DAQ</string>
+   </property>
+  </action>
+  <action name="actionk">
+   <property name="text">
+    <string>k</string>
+   </property>
+  </action>
+  <action name="actionTeensy_3_6">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Teensy 3.6</string>
+   </property>
+  </action>
+  <action name="actiondfg">
+   <property name="text">
+    <string>dfg</string>
+   </property>
+  </action>
+  <action name="actionasd">
+   <property name="text">
+    <string>asd</string>
+   </property>
+  </action>
+  <action name="actionasdf">
+   <property name="text">
+    <string>asdf</string>
+   </property>
+  </action>
+  <action name="actionTest">
+   <property name="text">
+    <string>Test</string>
+   </property>
+  </action>
+  <action name="actionasdf_2">
+   <property name="text">
+    <string>asdf</string>
+   </property>
+  </action>
+  <action name="actionasdf_3">
+   <property name="text">
+    <string>asdf</string>
+   </property>
+  </action>
+  <action name="actionSpectrum_Analyzer">
+   <property name="text">
+    <string>Spectrum Analyzer</string>
+   </property>
+  </action>
+  <action name="actionTwinleaf_CSB">
+   <property name="text">
+    <string>Twinleaf CSB</string>
+   </property>
+  </action>
+  <action name="actionChange_Color">
+   <property name="text">
+    <string>Change Main Color</string>
+   </property>
+  </action>
+  <action name="actionShow_path_to_config_ini">
+   <property name="text">
+    <string>Show path to &quot;_config.ini&quot;</string>
+   </property>
+  </action>
+  <action name="actionChange_Secondary_Color">
+   <property name="text">
+    <string>Change Secondary Color</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>pushButton</tabstop>
+  <tabstop>pushButton_2</tabstop>
+  <tabstop>lineEdit_cwd</tabstop>
+  <tabstop>lineEdit_runningTask</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

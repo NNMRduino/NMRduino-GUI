@@ -1,6 +1,10 @@
 # NMRduino GUI
 
-Desktop control and acquisition software for the NMRduino hardware.
+Desktop control and acquisition software for the [NMRduino](https://github.com/NNMRduino/NMRduino) hardware.
+
+**Compatibility:** requires NMRduino firmware v1.2.0+.
+
+A pre-built Windows release is available on the [latest release](https://github.com/NNMRduino/NMRduino-GUI/releases/latest) page.
 
 ## Included tasks
 
@@ -42,3 +46,7 @@ walks the real PE import table (via `objdump`) of the built exe and its Qt/MinGW
 DLLs, recursively, and adds the platform/imageformat/style plugins the app actually
 needs. It finishes with a smoke test that launches the packaged exe standalone and
 confirms it stays running.
+
+## License
+
+Licensed under GPL-3.0 — see [`LICENCE`](LICENCE).
